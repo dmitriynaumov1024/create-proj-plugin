@@ -7,7 +7,7 @@ let args = process.argv.slice(2)
 
 const outputPath = args[0]
 if (!outputPath) {
-    console.log("usage: command <outputPath: String>")
+    console.log("usage: command <outputPath: String> [pluginName: String]")
     process.exit(1)
 }
 
