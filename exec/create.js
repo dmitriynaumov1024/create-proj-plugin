@@ -6,7 +6,10 @@ const path = require("node:path")
 let args = process.argv.slice(2)
 
 const outputPath = args[0]
-if (!outputPath) console.log("usage: command <outputPath: String>")
+if (!outputPath) {
+    console.log("usage: command <outputPath: String>")
+    process.exit(1)
+}
 
 const pluginName = args[1] ?? "plugin"
 const pluginVersion = args[2] ?? "0.0.1"
